@@ -1,0 +1,54 @@
+<svg width="1200" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <filter id="canvas-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="5" result="noise" seed="3"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <linearGradient id="canvas-texture-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdfbf7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f8f5f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0ebe5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Canvas Paper Pattern -->
+    <pattern id="canvas-paper" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+      <rect width="120" height="120" fill="url(#canvas-texture-gradient)"/>
+      <!-- Texture dots for paper effect -->
+      <circle cx="10" cy="25" r="0.6" fill="#d9d4cd" opacity="0.25"/>
+      <circle cx="50" cy="50" r="0.4" fill="#d9d4cd" opacity="0.2"/>
+      <circle cx="90" cy="30" r="0.5" fill="#d9d4cd" opacity="0.22"/>
+      <circle cx="25" cy="85" r="0.7" fill="#d9d4cd" opacity="0.18"/>
+      <circle cx="75" cy="95" r="0.4" fill="#d9d4cd" opacity="0.25"/>
+      <circle cx="110" cy="65" r="0.6" fill="#d9d4cd" opacity="0.2"/>
+      
+      <!-- Subtle brush strokes -->
+      <line x1="5" y1="30" x2="50" y2="35" stroke="#d9d4cd" stroke-width="0.3" opacity="0.1"/>
+      <line x1="60" y1="70" x2="110" y2="75" stroke="#d9d4cd" stroke-width="0.3" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Main canvas background -->
+  <rect width="1200" height="80" fill="url(#canvas-texture-gradient)"/>
+  
+  <!-- Paper texture overlay -->
+  <rect width="1200" height="80" fill="url(#canvas-paper)" opacity="0.7"/>
+  
+  <!-- Subtle noise filter -->
+  <rect width="1200" height="80" fill="#fdfbf7" opacity="0.02" filter="url(#canvas-noise)"/>
+  
+  <!-- Soft shadow at edges -->
+  <defs>
+    <linearGradient id="edge-shadow-top" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0.03" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
+    </linearGradient>
+    <linearGradient id="edge-shadow-bottom" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.03" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="10" fill="url(#edge-shadow-top)"/>
+  <rect y="70" width="1200" height="10" fill="url(#edge-shadow-bottom)"/>
+</svg>

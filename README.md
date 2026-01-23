@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header Image with Canvas Background -->
-<img src="./assets/header.png" alt="Martin St - Pedagogy × Technology × Development" width="100%">
+<img src="./assets/header.svg" alt="Martin St - Pedagogy × Technology × Development" width="100%">
 
 <!-- LinkedIn Badge -->
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
@@ -11,7 +11,7 @@
 </div>
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## About Me
 
@@ -27,7 +27,7 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 ```
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## Featured Project: PresentationTemplate
 
@@ -57,7 +57,7 @@ A sophisticated presentation framework featuring:
 - Other: 1.9%
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## EdTech Platform Expertise
 
@@ -70,7 +70,7 @@ A sophisticated presentation framework featuring:
 Experience in rolling out educational technology solutions and providing advanced administrative support for school management systems.
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## Tech Stack
 
@@ -92,7 +92,7 @@ Experience in rolling out educational technology solutions and providing advance
 </div>
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## GitHub Stats
 
@@ -115,7 +115,7 @@ Experience in rolling out educational technology solutions and providing advance
 </div>
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 ## Let's Connect
 
@@ -130,7 +130,7 @@ Experience in rolling out educational technology solutions and providing advance
 </div>
 
 <!-- Canvas Divider -->
-<img src="./assets/canvas-bg.png" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
 <div align="center">
   <sub>Built with passion for pedagogy and technology • Canvas design inspired by PresentationTemplate</sub>
