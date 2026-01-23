@@ -1,0 +1,56 @@
+# GitHub Actions Workflow for Snake Animation
+# Generates a snake eating your contribution graph with pastel colors
+# Inspired by PresentationTemplate color palette
+
+name: Generate Snake Animation
+
+# Controls when the workflow will run
+on:
+  # Runs on a schedule (every 12 hours)
+  schedule:
+    - cron: "0 */12 * * *"  # At minute 0 past every 12th hour
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+  # Runs on every push to main branch
+  push:
+    branches:
+      - main
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    # Required permissions for the workflow
+    permissions:
+      contents: write
+    
+    steps:
+      # Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      # Generate the snake animation
+      - name: Generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: Praeto89
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+          
+          # Pastel color palette inspired by PresentationTemplate
+          # Colors: soft blue, mint, lavender, peach
+          gif_out_path: dist/snake.gif
+          svg_out_path: dist/snake.svg
+          
+      # Push the generated files to the output branch
+      - name: Push snake.svg to output branch
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
