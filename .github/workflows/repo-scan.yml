@@ -61,26 +61,28 @@ jobs:
       - name: Create daily issue report
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS }}
+          REPO: ${{ github.repository }}
         run: |
+          total=$(jq 'length' repos.json)
+          private=$(jq '[.[] | select(.private == true)] | length' repos.json)
+          archived=$(jq '[.[] | select(.archived == true)] | length' repos.json)
+          active=$(jq '[.[] | select(.archived != true)] | length' repos.json)
+
           today=$(date -u +"%Y-%m-%d")
           title="Daily repo scan ${today}"
 
-          summary=$(cat <<'EOF'
-          Repo scan summary:
-          - Total repos: $total
-          - Private repos: $private
-          - Archived repos: $archived
-          - Active (non-archived): $active
-
-          Detailed list (sorted by last push):
-          EOF
-          )
-
-          body="${summary}
-
-$(cat report.md)"
+          {
+            echo "Repo scan summary:"
+            echo "- Total repos: ${total}"
+            echo "- Private repos: ${private}"
+            echo "- Archived repos: ${archived}"
+            echo "- Active (non-archived): ${active}"
+            echo
+            echo "Detailed list (sorted by last push):"
+            cat report.md
+          } > issue_body.md
 
           gh issue create \
-            --repo "${GITHUB_REPOSITORY}" \
+            --repo "${REPO}" \
             --title "${title}" \
-            --body "${body}"
+            --body-file issue_body.md
