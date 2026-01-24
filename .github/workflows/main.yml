@@ -35,11 +35,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
-      # Generate the snake animation
+      # Generate the snake animation (includes private repos via token)
       - name: Generate snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Praeto89
+          github_token: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
           outputs: |
             dist/snake.svg?palette=github-dark
           
