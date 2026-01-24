@@ -47,13 +47,13 @@ jobs:
       # Push the generated files to the output branch
       - name: Push snake.svg to output branch
         run: |
-          mkdir -p output
-          cp dist/snake.svg output/snake.svg
-          cd output
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git checkout --orphan output
+          git rm -rf .
+          cp dist/snake.svg snake.svg
           git add snake.svg
-          git commit -m "Update snake animation" || true
-          git push -f origin HEAD:output
+          git commit -m "Update snake animation"
+          git push -f origin output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
