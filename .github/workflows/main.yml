@@ -43,12 +43,17 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
           outputs: |
             dist/snake.svg?palette=github-dark
-          
+      
       # Push the generated files to the output branch
       - name: Push snake.svg to output branch
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
+        run: |
+          mkdir -p output
+          cp dist/snake.svg output/snake.svg
+          cd output
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add snake.svg
+          git commit -m "Update snake animation" || true
+          git push -f origin HEAD:output
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
