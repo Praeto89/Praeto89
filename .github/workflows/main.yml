@@ -6,9 +6,9 @@ name: Generate Snake Animation
 
 # Controls when the workflow will run
 on:
-  # Runs on a schedule (every 12 hours)
+  # Runs on a schedule (daily at 05:00 UTC)
   schedule:
-    - cron: "0 */12 * * *"  # At minute 0 past every 12th hour
+    - cron: "0 5 * * *"
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,6 +20,9 @@ on:
 
 jobs:
   generate:
+    concurrency:
+      group: snake-${{ github.ref }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     timeout-minutes: 10
     
@@ -30,7 +33,7 @@ jobs:
     steps:
       # Check out the repository
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       # Generate the snake animation
       - name: Generate snake.svg

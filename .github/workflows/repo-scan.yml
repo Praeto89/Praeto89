@@ -1,0 +1,86 @@
+name: Repo Scan
+
+on:
+  schedule:
+    - cron: "15 5 * * *"  # daily 05:15 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: repo-scan-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: Ensure gh and jq are available
+        run: |
+          gh --version
+          jq --version
+
+      - name: Fetch repositories
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS }}
+        run: |
+          gh api /user/repos \
+            --paginate \
+            --jq '.[] | {full_name, private, archived, pushedAt}' \
+            > repos.ndjson
+
+          # Build JSON array from ndjson for artifact and reporting
+          jq -s '.' repos.ndjson > repos.json
+
+      - name: Summarize
+        run: |
+          total=$(jq 'length' repos.json)
+          private=$(jq '[.[] | select(.private == true)] | length' repos.json)
+          archived=$(jq '[.[] | select(.archived == true)] | length' repos.json)
+          active=$(jq '[.[] | select(.archived != true)] | length' repos.json)
+
+          echo "total=$total" >> $GITHUB_OUTPUT
+          echo "private=$private" >> $GITHUB_OUTPUT
+          echo "archived=$archived" >> $GITHUB_OUTPUT
+          echo "active=$active" >> $GITHUB_OUTPUT
+
+          # Build markdown table sorted by last push desc
+          jq -r '["| Repo | Private | Archived | Last Push |", "| --- | --- | --- | --- |"] +
+                 (sort_by(.pushedAt) | reverse | map("| " + .full_name + " | " + (.private|tostring) + " | " + (.archived|tostring) + " | " + (.pushedAt//"-") + " |"))
+                | .[]' repos.json > report.md
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-scan-report
+          path: |
+            repos.json
+            report.md
+
+      - name: Create daily issue report
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS }}
+        run: |
+          today=$(date -u +"%Y-%m-%d")
+          title="Daily repo scan ${today}"
+
+          summary=$(cat <<'EOF'
+          Repo scan summary:
+          - Total repos: $total
+          - Private repos: $private
+          - Archived repos: $archived
+          - Active (non-archived): $active
+
+          Detailed list (sorted by last push):
+          EOF
+          )
+
+          body="${summary}
+
+$(cat report.md)"
+
+          gh issue create \
+            --repo "${GITHUB_REPOSITORY}" \
+            --title "${title}" \
+            --body "${body}"
