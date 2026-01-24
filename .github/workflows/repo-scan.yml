@@ -46,9 +46,12 @@ jobs:
           echo "active=$active" >> $GITHUB_OUTPUT
 
           # Build markdown table sorted by last push desc
-          jq -r '["| Repo | Private | Archived | Last Push |", "| --- | --- | --- | --- |"] +
-                 (sort_by(.pushedAt) | reverse | map("| " + .full_name + " | " + (.private|tostring) + " | " + (.archived|tostring) + " | " + (.pushedAt//"-") + " |"))
-                | .[]' repos.json > report.md
+          jq -r '.[] | "| \(.full_name) | \(.private) | \(.archived) | \(.pushedAt//" - ") |"' repos.json | sort -k 5 -r > report_rows.txt
+          {
+            echo "| Repo | Private | Archived | Last Push |"
+            echo "| --- | --- | --- | --- |"
+            cat report_rows.txt
+          } > report.md
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
