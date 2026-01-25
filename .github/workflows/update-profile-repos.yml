@@ -34,21 +34,21 @@ jobs:
             echo "<!-- REPO-LIST:END -->"
           } > repos_section.md
 
-          python - <<'PY'
-from pathlib import Path
-import re
+                  python - <<'PY'
+                  from pathlib import Path
+                  import re
 
-readme = Path('README.md')
-section = Path('repos_section.md').read_text()
-pattern = r"<!-- REPO-LIST:START -->.*?<!-- REPO-LIST:END -->"
-text = readme.read_text()
-if re.search(pattern, text, flags=re.S):
-    text = re.sub(pattern, section, text, flags=re.S)
-else:
-    text = text.rstrip() + "\n\n" + section + "\n"
-readme.write_text(text)
-PY
+                  readme = Path('README.md')
+                  section = Path('repos_section.md').read_text()
+                  pattern = r"<!-- REPO-LIST:START -->.*?<!-- REPO-LIST:END -->"
+                  text = readme.read_text()
+                  if re.search(pattern, text, flags=re.S):
+                    text = re.sub(pattern, section, text, flags=re.S)
+                  else:
+                    text = text.rstrip() + "\n\n" + section + "\n"
+                  readme.write_text(text)
 
+                PY
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
