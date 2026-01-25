@@ -30,7 +30,7 @@ jobs:
 
           {
             echo "<!-- REPO-LIST:START -->"
-            jq -r '.[] | "- [" + .name + "](" + .html_url + ") — " + ((.description // "No description").gsub("\n"; " ")) + " _(updated " + ((.pushed_at // "").sub("T.*"; "")) + ")_"' repos.json
+            jq -r '.[] | "- [" + .name + "](" + .html_url + ") - " + ((.description // "No description") | gsub("\\n"; " ")) + " _(updated " + ((.pushed_at // "") | sub("T.*"; "")) + ")_"' repos.json
             echo "<!-- REPO-LIST:END -->"
           } > repos_section.md
 
