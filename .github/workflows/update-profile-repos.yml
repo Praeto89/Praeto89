@@ -1,0 +1,65 @@
+name: Update Profile Repos
+
+on:
+  schedule:
+    - cron: "45 4 * * *"  # daily 04:45 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: update-profile-repos-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate repo list section
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          gh api /users/Praeto89/repos --paginate --jq '.[] | select(.archived == false) | {name, html_url, description, pushed_at}' > repos.ndjson
+          jq -s 'sort_by(.pushed_at) | reverse | .[0:12]' repos.ndjson > repos.json
+
+          {
+            echo "<!-- REPO-LIST:START -->"
+            jq -r '.[] | "- [" + .name + "](" + .html_url + ") — " + ((.description // "No description").gsub("\n"; " ")) + " _(updated " + ((.pushed_at // "").sub("T.*"; "")) + ")_"' repos.json
+            echo "<!-- REPO-LIST:END -->"
+          } > repos_section.md
+
+          python - <<'PY'
+from pathlib import Path
+import re
+
+readme = Path('README.md')
+section = Path('repos_section.md').read_text()
+pattern = r"<!-- REPO-LIST:START -->.*?<!-- REPO-LIST:END -->"
+text = readme.read_text()
+if re.search(pattern, text, flags=re.S):
+    text = re.sub(pattern, section, text, flags=re.S)
+else:
+    text = text.rstrip() + "\n\n" + section + "\n"
+readme.write_text(text)
+PY
+
+      - name: Commit changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- README.md; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add README.md
+          git commit -m "chore: update repo list"
+          git push
