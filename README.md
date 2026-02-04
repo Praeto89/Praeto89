@@ -32,7 +32,9 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 ## Repositories
 
 <!-- REPO-LIST:START -->
-- Wird automatisch aktualisiert …
+- [Praeto89](https://github.com/Praeto89/Praeto89) - GitHub Profile Repository
+- [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen
+- [PresentationTemplate](https://github.com/Praeto89/PresentationTemplate) - Interactive Reveal.js Presentation Framework
 <!-- REPO-LIST:END -->
 
 ## Featured Project: PresentationTemplate
