@@ -85,7 +85,9 @@ jobs:
             cat report.md
           } > issue_body.md
 
-          gh issue create \
-            --repo "${REPO}" \
-            --title "${title}" \
-            --body-file issue_body.md
+          body=$(cat issue_body.md)
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${REPO}/issues" \
+            -d "$(jq -n --arg t "${title}" --arg b "${body}" '{title:$t,body:$b}')"
