@@ -63,7 +63,7 @@ jobs:
 
       - name: Create daily issue report
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           total=$(jq 'length' repos.json)
