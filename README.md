@@ -102,6 +102,15 @@ Experience in rolling out educational technology solutions and providing advance
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
+## Contributions
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Praeto89/Praeto89/output/snake.svg" alt="Snake animation" />
+</div>
+
+<!-- Canvas Divider -->
+<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+
 ## Let's Connect
 
 <div align="center">
