@@ -34,22 +34,77 @@ jobs:
             echo "<!-- REPO-LIST:END -->"
           } > repos_section.md
 
-                    cat > update_repos.py <<'PY'
-              from pathlib import Path
-              import re
+          cat > update_section.py <<'PY'
+          import sys, re
+          from pathlib import Path
 
-              readme = Path('README.md')
-              section = Path('repos_section.md').read_text()
-              pattern = r"<!-- REPO-LIST:START -->.*?<!-- REPO-LIST:END -->"
-              text = readme.read_text()
-              if re.search(pattern, text, flags=re.S):
-                text = re.sub(pattern, section, text, flags=re.S)
-              else:
-                text = text.rstrip() + "\n\n" + section + "\n"
-              readme.write_text(text)
-              PY
+          readme = Path('README.md')
+          section = Path(sys.argv[1]).read_text()
+          marker = sys.argv[2]
+          pattern = rf"<!-- {marker}:START -->.*?<!-- {marker}:END -->"
+          text = readme.read_text()
+          if re.search(pattern, text, flags=re.S):
+            text = re.sub(pattern, section, text, flags=re.S)
+          else:
+            text = text.rstrip() + "\n\n" + section + "\n"
+          readme.write_text(text)
+          PY
 
-                    python update_repos.py
+          python update_section.py repos_section.md REPO-LIST
+
+      - name: Generate pinned repos section
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          gh api graphql -f query='{
+            user(login: "Praeto89") {
+              pinnedItems(first: 6, types: REPOSITORY) {
+                nodes {
+                  ... on Repository {
+                    name
+                    url
+                    description
+                    primaryLanguage { name }
+                    stargazerCount
+                  }
+                }
+              }
+            }
+          }' --jq '.data.user.pinnedItems.nodes' > pinned.json
+
+          {
+            echo "<!-- PINNED-REPOS:START -->"
+            jq -r '.[] | "- [**" + .name + "**](" + .url + ") — " + ((.description // "No description") | gsub("\\n"; " ")) + " `" + (.primaryLanguage.name // "—") + "` ⭐ " + (.stargazerCount | tostring)' pinned.json
+            echo "<!-- PINNED-REPOS:END -->"
+          } > pinned_section.md
+
+          python update_section.py pinned_section.md PINNED-REPOS
+
+      - name: Generate language stats section
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+
+          gh api /users/Praeto89/repos --paginate --jq '.[].full_name' > repo_names.txt
+
+          # Fetch languages per repo and aggregate
+          while IFS= read -r repo; do
+            gh api "/repos/$repo/languages" 2>/dev/null || echo '{}'
+          done < repo_names.txt | jq -s 'add // {} | to_entries | sort_by(-.value)' > lang_data.json
+
+          total=$(jq '[.[].value] | add // 1' lang_data.json)
+
+          {
+            echo "<!-- LANG-STATS:START -->"
+            jq -r --argjson total "$total" '.[:6][] | "- **" + .key + ":** " + (.value * 100 / $total | round | tostring) + "%"' lang_data.json
+            echo "<!-- LANG-STATS:END -->"
+          } > lang_section.md
+
+          python update_section.py lang_section.md LANG-STATS
+
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -62,5 +117,5 @@ jobs:
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
           git add README.md
-          git commit -m "chore: update repo list"
+          git commit -m "chore: update profile sections"
           git push

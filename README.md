@@ -37,32 +37,10 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 - [PresentationTemplate](https://github.com/Praeto89/PresentationTemplate) - Interactive Reveal.js Presentation Framework
 <!-- REPO-LIST:END -->
 
-## Featured Project: PresentationTemplate
+## Pinned Repositories
 
-<div align="center">
-
-<!-- TODO: Add screenshot when available -->
-<!-- <img src="./assets/project-preview.png" alt="PresentationTemplate Preview" width="600"> -->
-**📚 [View Repository →](https://github.com/Praeto89/PresentationTemplate)**
-
-</div>
-
-**Interactive Reveal.js Presentation** with mindmap navigation and book-page design
-
-A sophisticated presentation framework featuring:
-- 3D book opening animation with zoom transitions
-- Circular tile menu for topic navigation
-- Mindmap-style sub-navigation with orbital childnodes
-- Paper-like page design with typographic margins (Satzspiegel)
-- Spiral zoom transitions with dynamic color themes
-- Bookmark persistence for important subtopics
-- Admin mode for live content editing
-
-**Tech Stack:**
-- JavaScript: 66.8%
-- HTML: 18.8%
-- CSS: 12.5%
-- Other: 1.9%
+<!-- PINNED-REPOS:START -->
+<!-- PINNED-REPOS:END -->
 
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
@@ -98,6 +76,11 @@ Experience in rolling out educational technology solutions and providing advance
 <img src="https://img.shields.io/badge/Escola-Superadmin-FFD6BA?style=flat" alt="Escola">
 
 </div>
+
+### Language Distribution
+
+<!-- LANG-STATS:START -->
+<!-- LANG-STATS:END -->
 
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
