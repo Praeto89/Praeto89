@@ -101,7 +101,7 @@ Experience in rolling out educational technology solutions and providing advance
 ## Contributions
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Praeto89/Praeto89/output/snake.svg" alt="Snake animation" />
+  <img src="./metrics.svg" alt="GitHub Metrics" width="100%" />
 </div>
 
 <!-- Canvas Divider -->
