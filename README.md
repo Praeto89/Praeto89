@@ -32,15 +32,21 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 ## Repositories
 
 <!-- REPO-LIST:START -->
-- [Praeto89](https://github.com/Praeto89/Praeto89) - GitHub Profile Repository
-- [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen
-- [PresentationTemplate](https://github.com/Praeto89/PresentationTemplate) - Interactive Reveal.js Presentation Framework
+- [Praeto89](https://github.com/Praeto89/Praeto89) - No description _(updated 2026-03-25)_
+- [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) - No description _(updated 2026-03-25)_
+- [lp21games](https://github.com/Praeto89/lp21games) - No description _(updated 2026-03-18)_
+- [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
+
 
 ## Pinned Repositories
 
 <!-- PINNED-REPOS:START -->
+- [**Praeto89**](https://github.com/Praeto89/Praeto89) — No description `—` ⭐ 1
+- [**SobeGameStudios**](https://github.com/Praeto89/SobeGameStudios) — No description `GDScript` ⭐ 1
+- [**lp21games**](https://github.com/Praeto89/lp21games) — No description `JavaScript` ⭐ 0
 <!-- PINNED-REPOS:END -->
+
 
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
@@ -80,7 +86,14 @@ Experience in rolling out educational technology solutions and providing advance
 ### Language Distribution
 
 <!-- LANG-STATS:START -->
+- **Python:** 54%
+- **TypeScript:** 27%
+- **GDScript:** 13%
+- **HTML:** 5%
+- **JavaScript:** 0%
+- **CSS:** 0%
 <!-- LANG-STATS:END -->
+
 
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
