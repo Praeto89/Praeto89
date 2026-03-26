@@ -39,6 +39,7 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 <!-- REPO-LIST:END -->
 
 
+
 ## Pinned Repositories
 
 <!-- PINNED-REPOS:START -->
@@ -46,6 +47,7 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 - [**SobeGameStudios**](https://github.com/Praeto89/SobeGameStudios) — No description `GDScript` ⭐ 1
 - [**lp21games**](https://github.com/Praeto89/lp21games) — No description `JavaScript` ⭐ 0
 <!-- PINNED-REPOS:END -->
+
 
 
 <!-- Canvas Divider -->
@@ -93,6 +95,7 @@ Experience in rolling out educational technology solutions and providing advance
 - **JavaScript:** 0%
 - **CSS:** 0%
 <!-- LANG-STATS:END -->
+
 
 
 <!-- Canvas Divider -->
