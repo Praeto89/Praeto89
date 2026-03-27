@@ -23,9 +23,6 @@ jobs:
           plugin_languages: yes
           plugin_languages_limit: 6
           plugin_languages_details: percentage
-          plugin_activity: yes
-          plugin_activity_limit: 5
-          plugin_activity_visibility: public
           filename: metrics.svg
           output_action: commit
           committer_message: "chore: update metrics"
