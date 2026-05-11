@@ -32,11 +32,12 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 ## Repositories
 
 <!-- REPO-LIST:START -->
-- [Praeto89](https://github.com/Praeto89/Praeto89) - No description _(updated 2026-05-09)_
+- [Praeto89](https://github.com/Praeto89/Praeto89) - No description _(updated 2026-05-10)_
 - [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) - No description _(updated 2026-05-06)_
 - [lp21games](https://github.com/Praeto89/lp21games) - No description _(updated 2026-03-18)_
 - [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
+
 
 
 
@@ -140,6 +141,7 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 
 
 
+
 <!-- Canvas Divider -->
 <img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
 
@@ -185,6 +187,7 @@ Experience in rolling out educational technology solutions and providing advance
 - **JavaScript:** 0%
 - **CSS:** 0%
 <!-- LANG-STATS:END -->
+
 
 
 
