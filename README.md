@@ -1,17 +1,14 @@
 <div align="center">
 
-<!-- Header Image with Canvas Background -->
 <img src="./assets/header.svg" alt="Martin St - Pedagogy × Technology × Development" width="100%">
 
-<!-- LinkedIn Badge -->
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 
 </div>
 
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## About Me
 
@@ -26,8 +23,17 @@ expertise: Shaping educational technology in pedagogically sound ways
 approach: Intersection of teaching, tech innovation, and organizational growth
 ```
 
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
+
+## GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Praeto89&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a29bfe&icon_color=54a0ff&text_color=dfe6e9" alt="GitHub Stats" height="160"/>
+  &nbsp;&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Praeto89&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a29bfe&text_color=dfe6e9" alt="Top Languages" height="160"/>
+</div>
+
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Repositories
 
@@ -38,70 +44,6 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 - [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Pinned Repositories
 
 <!-- PINNED-REPOS:START -->
@@ -110,72 +52,7 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 - [**lp21games**](https://github.com/Praeto89/lp21games) — No description `JavaScript` ⭐ 0
 <!-- PINNED-REPOS:END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## EdTech Platform Expertise
 
@@ -187,14 +64,12 @@ approach: Intersection of teaching, tech innovation, and organizational growth
 
 Experience in rolling out educational technology solutions and providing advanced administrative support for school management systems.
 
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Tech Stack
 
 <div align="center">
 
-<!-- Programming Languages -->
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
@@ -202,7 +77,6 @@ Experience in rolling out educational technology solutions and providing advance
 
 <br><br>
 
-<!-- EdTech Platforms -->
 <img src="https://img.shields.io/badge/Lehreroffice-Superadmin-C7CEEA?style=flat" alt="Lehreroffice">
 <img src="https://img.shields.io/badge/Pupil-Superadmin-B5EAD7?style=flat" alt="Pupil">
 <img src="https://img.shields.io/badge/Escola-Superadmin-FFD6BA?style=flat" alt="Escola">
@@ -212,89 +86,22 @@ Experience in rolling out educational technology solutions and providing advance
 ### Language Distribution
 
 <!-- LANG-STATS:START -->
-- **Python:** 55%
-- **TypeScript:** 28%
-- **GDScript:** 11%
-- **HTML:** 5%
-- **JavaScript:** 0%
-- **CSS:** 0%
+<div align="center">
+  <img src="./assets/lang-bars.svg" alt="Language Distribution" width="500"/>
+</div>
 <!-- LANG-STATS:END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Contributions
 
 <div align="center">
-  <img src="./metrics.svg" alt="GitHub Metrics" width="100%" />
+  <img src="./assets/snake.svg" alt="Contribution Snake" width="100%"/>
+  <br><br>
+  <img src="./metrics.svg" alt="GitHub Metrics" width="100%"/>
 </div>
 
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Let's Connect
 
@@ -308,9 +115,8 @@ Experience in rolling out educational technology solutions and providing advance
 
 </div>
 
-<!-- Canvas Divider -->
-<img src="./assets/canvas-bg.svg" alt="" width="100%" style="opacity: 0.8; margin: 30px 0;">
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 <div align="center">
-  <sub>Built with passion for pedagogy and technology • Canvas design inspired by PresentationTemplate</sub>
+  <sub>Built with passion for pedagogy and technology</sub>
 </div>

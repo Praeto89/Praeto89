@@ -1,0 +1,44 @@
+<svg width="500" height="180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 180">
+  <defs>
+    <linearGradient id="py-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3776ab"/>
+      <stop offset="100%" stop-color="#54a0ff"/>
+    </linearGradient>
+    <linearGradient id="ts-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3178c6"/>
+      <stop offset="100%" stop-color="#a29bfe"/>
+    </linearGradient>
+    <linearGradient id="gd-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#478cbf"/>
+      <stop offset="100%" stop-color="#00d2d3"/>
+    </linearGradient>
+    <linearGradient id="ht-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e34c26"/>
+      <stop offset="100%" stop-color="#fd79a8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Python 55% -->
+  <text x="0" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#c5c9d0" font-weight="600">Python</text>
+  <text x="490" y="20" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#a29bfe" text-anchor="end">55%</text>
+  <rect x="0" y="26" width="450" height="10" rx="5" fill="#1a1a3e"/>
+  <rect x="0" y="26" width="247" height="10" rx="5" fill="url(#py-grad)"/>
+
+  <!-- TypeScript 28% -->
+  <text x="0" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#c5c9d0" font-weight="600">TypeScript</text>
+  <text x="490" y="62" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#a29bfe" text-anchor="end">28%</text>
+  <rect x="0" y="68" width="450" height="10" rx="5" fill="#1a1a3e"/>
+  <rect x="0" y="68" width="126" height="10" rx="5" fill="url(#ts-grad)"/>
+
+  <!-- GDScript 11% -->
+  <text x="0" y="104" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#c5c9d0" font-weight="600">GDScript</text>
+  <text x="490" y="104" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#a29bfe" text-anchor="end">11%</text>
+  <rect x="0" y="110" width="450" height="10" rx="5" fill="#1a1a3e"/>
+  <rect x="0" y="110" width="49" height="10" rx="5" fill="url(#gd-grad)"/>
+
+  <!-- HTML 5% -->
+  <text x="0" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#c5c9d0" font-weight="600">HTML</text>
+  <text x="490" y="146" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#a29bfe" text-anchor="end">5%</text>
+  <rect x="0" y="152" width="450" height="10" rx="5" fill="#1a1a3e"/>
+  <rect x="0" y="152" width="22" height="10" rx="5" fill="url(#ht-grad)"/>
+</svg>
