@@ -97,16 +97,6 @@ Experience in rolling out educational technology solutions and providing advance
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Praeto89&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a29bfe&icon_color=54a0ff&text_color=dfe6e9" alt="GitHub Stats" height="160"/>
-  &nbsp;&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Praeto89&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f0c29&title_color=a29bfe&text_color=dfe6e9" alt="Top Languages" height="160"/>
-</div>
-
-<img src="./assets/canvas-bg.svg" alt="" width="100%">
-
 ## Repositories
 
 <!-- REPO-LIST:START -->
