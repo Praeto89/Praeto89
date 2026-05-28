@@ -28,9 +28,10 @@ jobs:
           gh api /users/Praeto89/repos --paginate --jq '.[] | select(.archived == false) | {name, html_url, description, pushed_at}' > repos.ndjson
           jq -s 'sort_by(.pushed_at) | reverse | .[0:12]' repos.ndjson > repos.json
 
+          custom=$(cat assets/repo-descriptions.json 2>/dev/null || echo '{}')
           {
             echo "<!-- REPO-LIST:START -->"
-            jq -r '.[] | "- [" + .name + "](" + .html_url + ") - " + ((.description // "No description") | gsub("\\n"; " ")) + " _(updated " + ((.pushed_at // "") | sub("T.*"; "")) + ")_"' repos.json
+            jq -r --argjson custom "$custom" '.[] | "- [" + .name + "](" + .html_url + ") - " + ((.description // $custom[.name] // "No description") | gsub("\\n"; " ")) + " _(updated " + ((.pushed_at // "") | sub("T.*"; "")) + ")_"' repos.json
             echo "<!-- REPO-LIST:END -->"
           } > repos_section.md
 
@@ -74,9 +75,10 @@ jobs:
             }
           }' --jq '.data.user.pinnedItems.nodes' > pinned.json
 
+          custom=$(cat assets/repo-descriptions.json 2>/dev/null || echo '{}')
           {
             echo "<!-- PINNED-REPOS:START -->"
-            jq -r '.[] | "- [**" + .name + "**](" + .url + ") — " + ((.description // "No description") | gsub("\\n"; " ")) + " `" + (.primaryLanguage.name // "—") + "` ⭐ " + (.stargazerCount | tostring)' pinned.json
+            jq -r --argjson custom "$custom" '.[] | "- [**" + .name + "**](" + .url + ") — " + ((.description // $custom[.name] // "No description") | gsub("\\n"; " ")) + " `" + (.primaryLanguage.name // "—") + "` ⭐ " + (.stargazerCount | tostring)' pinned.json
             echo "<!-- PINNED-REPOS:END -->"
           } > pinned_section.md
 

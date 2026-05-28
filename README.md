@@ -84,10 +84,15 @@ Experience in rolling out educational technology solutions and providing advance
 
 ### Language Distribution
 
-<!-- LANG-STATS:START -->
 <div align="center">
   <img src="./assets/lang-bars.svg" alt="Language Distribution" width="500"/>
 </div>
+
+<!-- LANG-STATS:START -->
+- **Python:** 55%
+- **TypeScript:** 28%
+- **GDScript:** 11%
+- **HTML:** 5%
 <!-- LANG-STATS:END -->
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
@@ -105,18 +110,18 @@ Experience in rolling out educational technology solutions and providing advance
 ## Repositories
 
 <!-- REPO-LIST:START -->
-- [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) - No description _(updated 2026-05-26)_
-- [Praeto89](https://github.com/Praeto89/Praeto89) - No description _(updated 2026-05-26)_
-- [lp21games](https://github.com/Praeto89/lp21games) - No description _(updated 2026-03-18)_
-- [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
+- [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) - Godot workshop demo projects and teaching materials _(updated 2026-05-26)_
+- [Praeto89](https://github.com/Praeto89/Praeto89) - GitHub profile – EdTech Specialist & Godot Workshop Instructor _(updated 2026-05-26)_
+- [lp21games](https://github.com/Praeto89/lp21games) - Educational games for the LP21 curriculum _(updated 2026-03-18)_
+- [wochenplaner](https://github.com/Praeto89/wochenplaner) - Weekly planner for students and teachers _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
 
 ## Pinned Repositories
 
 <!-- PINNED-REPOS:START -->
-- [**Praeto89**](https://github.com/Praeto89/Praeto89) — No description `—` ⭐ 1
-- [**SobeGameStudios**](https://github.com/Praeto89/SobeGameStudios) — No description `GDScript` ⭐ 1
-- [**lp21games**](https://github.com/Praeto89/lp21games) — No description `JavaScript` ⭐ 0
+- [**Praeto89**](https://github.com/Praeto89/Praeto89) — GitHub profile – EdTech Specialist & Godot Workshop Instructor `—` ⭐ 1
+- [**SobeGameStudios**](https://github.com/Praeto89/SobeGameStudios) — Godot workshop demo projects and teaching materials `GDScript` ⭐ 1
+- [**lp21games**](https://github.com/Praeto89/lp21games) — Educational games for the LP21 curriculum `JavaScript` ⭐ 0
 <!-- PINNED-REPOS:END -->
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
