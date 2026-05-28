@@ -44,16 +44,18 @@ jobs:
           outputs: |
             dist/snake.svg?palette=github-dark
       
-      # Push the generated files to the output branch
-      - name: Push snake.svg to output branch
+      # Commit snake.svg directly to main
+      - name: Commit snake.svg to main
         run: |
+          cp dist/snake.svg assets/snake.svg
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git checkout --orphan output
-          git rm -rf .
-          cp dist/snake.svg snake.svg
-          git add snake.svg
-          git commit -m "Update snake animation"
-          git push -f origin output
+          if git diff --quiet -- assets/snake.svg; then
+            echo "No changes to snake.svg"
+          else
+            git add assets/snake.svg
+            git commit -m "chore: update snake animation"
+            git push origin main
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
