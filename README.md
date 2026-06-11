@@ -2,18 +2,18 @@
 
 <img src="./assets/header.svg" alt="Martin Stalder - Pädagogik × Godot × Game-Based Learning" width="100%">
 
-<a href="https://educandus.ch">
-  <img src="https://img.shields.io/badge/Educandus-educandus.ch-2e7d32?style=flat&logo=wordpress&logoColor=white" alt="Educandus – educandus.ch">
+<a href="https://www.educandus.ch">
+  <img src="https://img.shields.io/badge/Educandus-www.educandus.ch-2e7d32?style=flat&logo=wordpress&logoColor=white" alt="Educandus – www.educandus.ch">
 </a>
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
+  <img src="https://img.shields.io/badge/LinkedIn-Vernetzen-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 
 </div>
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## Über mich · About Me
+## Über mich
 
 ```yaml
 name: Martin Stalder
@@ -26,8 +26,6 @@ schwerpunkte:
 marke: Educandus – Dienstleistungen für Lehrpersonen
 ansatz: Godot als kreatives Werkzeug zwischen Spiel, Logik und Lernen
 ```
-
-> 🇬🇧 EdTech specialist and Godot workshop instructor from Switzerland. I run **[Educandus](https://educandus.ch)** (services for teachers, inclusive education) and teach game development as a pedagogical method — bridging play, logic, and learning.
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
@@ -50,35 +48,29 @@ Im Gameatelier entwickeln Schülerinnen und Schüler eigene Spiele mit der Godot
 | **Game-Logik mit GDScript** | Sekundarstufe I (Zyklus 3) | Algorithmisches Denken, Variablen und Schleifen — spielerisch erarbeitet |
 | **Godot für Lehrpersonen** | Lehrpersonen & Schulteams | Games als didaktische Methode — Integration in den eigenen Unterricht |
 
-> **Workshop an Ihrer Schule oder Institution geplant?** [Anfrage über educandus.ch](https://educandus.ch) oder [LinkedIn](https://www.linkedin.com/in/martin-stalder-787239216/)
+> **Workshop an Ihrer Schule oder Institution geplant?** [Anfrage über www.educandus.ch](https://www.educandus.ch) oder [LinkedIn](https://www.linkedin.com/in/martin-stalder-787239216/)
 
-🇬🇧 *Game-based learning workshops for schools and educational institutions — from a first playful introduction to students building their own mini-game, aligned with the Swiss Lehrplan 21. Inclusive settings and the reflective use of AI are part of the concept.*
-
-**Flaggschiff-Projekt · Flagship project:** [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) — ein offenes Godot-4-Lernprojekt (2D-Platformer) mit deutschsprachiger Dokumentation, Aufgaben, Debugging-Übungen («Bugchase») und automatisierten Tests. So sieht ein Workshop-Projekt in der Praxis aus.
+**Flaggschiff-Projekt:** [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) — ein offenes Godot-4-Lernprojekt (2D-Platformer) mit deutschsprachiger Dokumentation, Aufgaben, Debugging-Übungen («Bugchase») und automatisierten Tests. So sieht ein Workshop-Projekt in der Praxis aus.
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Educandus – Dienstleistungen für Lehrpersonen
 
-Educandus ist meine pädagogische Marke: Beratung und Dienstleistungen für Lehrpersonen und Schulen — mit Fokus auf inklusive Bildung, Sonderpädagogik und den sinnvollen Einsatz von Technologie im Unterricht. Auf dem Blog schreibe ich über Schule, Inklusion und KI im Unterricht.
+Educandus ist meine pädagogische Marke: Beratung und Dienstleistungen für Lehrpersonen und Schulen — mit Fokus auf inklusive Bildung, Sonderpädagogik und den sinnvollen Einsatz von Technologie im Unterricht.
 
-➡️ **[educandus.ch](https://educandus.ch)**
-
-🇬🇧 *Educandus is my pedagogy brand: consulting and services for teachers and schools, focused on inclusive education, special needs education, and the meaningful use of technology in the classroom.*
+➡️ **[www.educandus.ch](https://www.educandus.ch)**
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## EdTech-Plattform-Expertise · EdTech Platform Expertise
+## EdTech-Plattform-Expertise
 
-**Einführungsprojekte & Zertifizierungen · Implementation projects & certifications:**
+**Einführungsprojekte & Zertifizierungen:**
 
 - **LehrerOffice** – Einführungsprojekte, Superadmin-Zertifizierung
 - **Pupil** – Einführungsprojekte, Superadmin-Zertifizierung
 - **Escola** – Einführungsprojekte, Superadmin-Zertifizierung
 
 Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrativen Support für Schulverwaltungssysteme.
-
-🇬🇧 *Experience rolling out educational technology solutions and providing advanced administrative support for school management systems.*
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
@@ -101,10 +93,10 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 
 </div>
 
-### Sprachverteilung · Language Distribution
+### Sprachverteilung
 
 <div align="center">
-  <img src="./assets/lang-bars.svg" alt="Language Distribution" width="500"/>
+  <img src="./assets/lang-bars.svg" alt="Sprachverteilung" width="500"/>
 </div>
 
 <!-- LANG-STATS:START -->
@@ -127,7 +119,7 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## Contributions
+## Aktivität
 
 <div align="center">
   <img src="./assets/snake.svg" alt="Contribution Snake" width="100%"/>
@@ -137,20 +129,18 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## Kontakt · Let's Connect
+## Kontakt
 
 <div align="center">
 
 **Godot-Workshop an Ihrer Schule? Interesse an einer EdTech-Zusammenarbeit?**
 
-🇬🇧 *Planning a Godot workshop at your school? Interested in EdTech collaboration?*
-
-<a href="https://educandus.ch">
-  <img src="https://img.shields.io/badge/Workshop_anfragen-educandus.ch-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Workshop anfragen – educandus.ch">
+<a href="https://www.educandus.ch">
+  <img src="https://img.shields.io/badge/Workshop_anfragen-www.educandus.ch-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Workshop anfragen – www.educandus.ch">
 </a>
 &nbsp;
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
-  <img src="https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn">
+  <img src="https://img.shields.io/badge/Auf_LinkedIn_vernetzen-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Auf LinkedIn vernetzen">
 </a>
 
 </div>
@@ -158,5 +148,5 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 <div align="center">
-  <sub>Mit Leidenschaft für Pädagogik, Godot und Game-Based Learning · Built with passion for pedagogy, Godot, and game-based learning</sub>
+  <sub>Mit Leidenschaft für Pädagogik, Godot und Game-Based Learning</sub>
 </div>
