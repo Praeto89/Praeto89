@@ -53,37 +53,6 @@ jobs:
 
           python update_section.py repos_section.md REPO-LIST
 
-      - name: Generate pinned repos section
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-
-          gh api graphql -f query='{
-            user(login: "Praeto89") {
-              pinnedItems(first: 6, types: REPOSITORY) {
-                nodes {
-                  ... on Repository {
-                    name
-                    url
-                    description
-                    primaryLanguage { name }
-                    stargazerCount
-                  }
-                }
-              }
-            }
-          }' --jq '.data.user.pinnedItems.nodes' > pinned.json
-
-          custom=$(cat assets/repo-descriptions.json 2>/dev/null || echo '{}')
-          {
-            echo "<!-- PINNED-REPOS:START -->"
-            jq -r --argjson custom "$custom" '.[] | "- [**" + .name + "**](" + .url + ") — " + ((.description // $custom[.name] // "No description") | gsub("\\n"; " ")) + " `" + (.primaryLanguage.name // "—") + "` ⭐ " + (.stargazerCount | tostring)' pinned.json
-            echo "<!-- PINNED-REPOS:END -->"
-          } > pinned_section.md
-
-          python update_section.py pinned_section.md PINNED-REPOS
-
       - name: Generate language stats section
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
@@ -101,7 +70,7 @@ jobs:
 
           {
             echo "<!-- LANG-STATS:START -->"
-            jq -r --argjson total "$total" '.[:6][] | "- **" + .key + ":** " + (.value * 100 / $total | round | tostring) + "%"' lang_data.json
+            jq -r --argjson total "$total" '.[:6][] | (.value * 100 / $total | round) as $pct | select($pct >= 1) | "- **" + .key + ":** " + ($pct | tostring) + "%"' lang_data.json
             echo "<!-- LANG-STATS:END -->"
           } > lang_section.md
 

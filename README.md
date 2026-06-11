@@ -1,7 +1,10 @@
 <div align="center">
 
-<img src="./assets/header.svg" alt="Martin St - Pedagogy × Godot × Game-Based Learning" width="100%">
+<img src="./assets/header.svg" alt="Martin Stalder - Pädagogik × Godot × Game-Based Learning" width="100%">
 
+<a href="https://educandus.ch">
+  <img src="https://img.shields.io/badge/Educandus-educandus.ch-2e7d32?style=flat&logo=wordpress&logoColor=white" alt="Educandus – educandus.ch">
+</a>
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
@@ -10,56 +13,72 @@
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## About Me
+## Über mich · About Me
 
 ```yaml
-name: Martin St
-role: EdTech Specialist & Godot Workshop Instructor
-focus_areas:
-  - Game-Based Learning with Godot Engine
-  - Pedagogy & Didactics
-  - EdTech Implementation & Administration
-workshops: Game development as a teaching method for schools & institutions
-expertise: Bridging game development and pedagogically sound education
-approach: Godot as a creative tool at the intersection of play, logic, and learning
+name: Martin Stalder
+rolle: EdTech-Spezialist & Godot-Workshopleiter
+schwerpunkte:
+  - Game-Based Learning mit der Godot Engine (Gameatelier)
+  - Pädagogik, Didaktik & inklusive Bildung
+  - KI im Unterricht
+  - EdTech-Einführung & -Administration
+marke: Educandus – Dienstleistungen für Lehrpersonen
+ansatz: Godot als kreatives Werkzeug zwischen Spiel, Logik und Lernen
 ```
+
+> 🇬🇧 EdTech specialist and Godot workshop instructor from Switzerland. I run **[Educandus](https://educandus.ch)** (services for teachers, inclusive education) and teach game development as a pedagogical method — bridging play, logic, and learning.
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## Godot Workshops
+## Gameatelier – Godot-Workshops
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Godot_Engine-Workshop_Instructor-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Godot Workshop Instructor">
-  <img src="https://img.shields.io/badge/Audience-Schools_%26_Institutions-302b63?style=for-the-badge" alt="Audience: Schools & Institutions">
+  <img src="https://img.shields.io/badge/Godot_Engine-Workshopleitung-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Godot Engine Workshopleitung">
+  <img src="https://img.shields.io/badge/Zielgruppe-Schulen_%26_Institutionen-302b63?style=for-the-badge" alt="Zielgruppe: Schulen & Institutionen">
 </div>
 
 <br>
 
-**Game-Based Learning for Schools & Educational Institutions**
+**Game-Based Learning für Schulen & Bildungsinstitutionen**
 
-Using Godot Engine as a creative teaching tool — from a first playful introduction all the way to students building their own mini-game. All workshops are designed with a clear pedagogical structure and adapted to the school context.
+Im Gameatelier entwickeln Schülerinnen und Schüler eigene Spiele mit der Godot Engine — vom ersten spielerischen Einstieg bis zum eigenen Mini-Game. Alle Workshops sind didaktisch klar strukturiert, am Lehrplan 21 orientiert und funktionieren auch in inklusiven Settings. Der reflektierte Einsatz von KI beim Lernen ist Teil des Konzepts.
 
-| Workshop | Audience | Focus |
+| Workshop | Zielgruppe | Fokus |
 |---|---|---|
-| **Godot Basics** | Grade 5+ | First steps in game development — no prior coding needed |
-| **Game Logic with GDScript** | Secondary School | Algorithmic thinking, variables, loops through play |
-| **Godot for Educators** | Teachers & School Staff | Games as a didactic method — how to integrate into lessons |
+| **Godot Basics** | Zyklus 2/3 (ab 5. Klasse) | Erste Schritte in der Spielentwicklung — ohne Programmier-Vorkenntnisse |
+| **Game-Logik mit GDScript** | Sekundarstufe I (Zyklus 3) | Algorithmisches Denken, Variablen und Schleifen — spielerisch erarbeitet |
+| **Godot für Lehrpersonen** | Lehrpersonen & Schulteams | Games als didaktische Methode — Integration in den eigenen Unterricht |
 
-> **Planning a workshop at your school or institution?** [Get in touch on LinkedIn](https://www.linkedin.com/in/martin-stalder-787239216/)
+> **Workshop an Ihrer Schule oder Institution geplant?** [Anfrage über educandus.ch](https://educandus.ch) oder [LinkedIn](https://www.linkedin.com/in/martin-stalder-787239216/)
 
-*Workshop materials and demo projects: [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios)*
+🇬🇧 *Game-based learning workshops for schools and educational institutions — from a first playful introduction to students building their own mini-game, aligned with the Swiss Lehrplan 21. Inclusive settings and the reflective use of AI are part of the concept.*
+
+**Flaggschiff-Projekt · Flagship project:** [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) — ein offenes Godot-4-Lernprojekt (2D-Platformer) mit deutschsprachiger Dokumentation, Aufgaben, Debugging-Übungen («Bugchase») und automatisierten Tests. So sieht ein Workshop-Projekt in der Praxis aus.
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## EdTech Platform Expertise
+## Educandus – Dienstleistungen für Lehrpersonen
 
-**Implementation Projects & Certifications:**
+Educandus ist meine pädagogische Marke: Beratung und Dienstleistungen für Lehrpersonen und Schulen — mit Fokus auf inklusive Bildung, Sonderpädagogik und den sinnvollen Einsatz von Technologie im Unterricht. Auf dem Blog schreibe ich über Schule, Inklusion und KI im Unterricht.
 
-- **Lehreroffice** - Implementation projects, Superadmin certification
-- **Pupil** - Implementation projects, Superadmin certification
-- **Escola** - Implementation projects, Superadmin certification
+➡️ **[educandus.ch](https://educandus.ch)**
 
-Experience in rolling out educational technology solutions and providing advanced administrative support for school management systems.
+🇬🇧 *Educandus is my pedagogy brand: consulting and services for teachers and schools, focused on inclusive education, special needs education, and the meaningful use of technology in the classroom.*
+
+<img src="./assets/canvas-bg.svg" alt="" width="100%">
+
+## EdTech-Plattform-Expertise · EdTech Platform Expertise
+
+**Einführungsprojekte & Zertifizierungen · Implementation projects & certifications:**
+
+- **LehrerOffice** – Einführungsprojekte, Superadmin-Zertifizierung
+- **Pupil** – Einführungsprojekte, Superadmin-Zertifizierung
+- **Escola** – Einführungsprojekte, Superadmin-Zertifizierung
+
+Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrativen Support für Schulverwaltungssysteme.
+
+🇬🇧 *Experience rolling out educational technology solutions and providing advanced administrative support for school management systems.*
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
@@ -76,13 +95,13 @@ Experience in rolling out educational technology solutions and providing advance
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Lehreroffice-Superadmin-C7CEEA?style=flat" alt="Lehreroffice">
+<img src="https://img.shields.io/badge/LehrerOffice-Superadmin-C7CEEA?style=flat" alt="LehrerOffice">
 <img src="https://img.shields.io/badge/Pupil-Superadmin-B5EAD7?style=flat" alt="Pupil">
 <img src="https://img.shields.io/badge/Escola-Superadmin-FFD6BA?style=flat" alt="Escola">
 
 </div>
 
-### Language Distribution
+### Sprachverteilung · Language Distribution
 
 <div align="center">
   <img src="./assets/lang-bars.svg" alt="Language Distribution" width="500"/>
@@ -93,24 +112,7 @@ Experience in rolling out educational technology solutions and providing advance
 - **GDScript:** 29%
 - **TypeScript:** 22%
 - **HTML:** 4%
-- **GDShader:** 0%
-- **JavaScript:** 0%
 <!-- LANG-STATS:END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
@@ -122,44 +124,6 @@ Experience in rolling out educational technology solutions and providing advance
 - [lp21games](https://github.com/Praeto89/lp21games) - Educational games for the LP21 curriculum _(updated 2026-03-18)_
 - [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Pinned Repositories
-
-<!-- PINNED-REPOS:START -->
-- [**Praeto89**](https://github.com/Praeto89/Praeto89) — GitHub profile – EdTech Specialist & Godot Workshop Instructor `—` ⭐ 1
-- [**SobeGameStudios**](https://github.com/Praeto89/SobeGameStudios) — Godot workshop demo projects and teaching materials `GDScript` ⭐ 1
-- [**lp21games**](https://github.com/Praeto89/lp21games) — Educational games for the LP21 curriculum `JavaScript` ⭐ 0
-<!-- PINNED-REPOS:END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
@@ -173,14 +137,16 @@ Experience in rolling out educational technology solutions and providing advance
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
-## Let's Connect
+## Kontakt · Let's Connect
 
 <div align="center">
 
-**Planning a Godot workshop at your school? Interested in EdTech collaboration?**
+**Godot-Workshop an Ihrer Schule? Interesse an einer EdTech-Zusammenarbeit?**
 
-<a href="https://www.linkedin.com/in/martin-stalder-787239216/">
-  <img src="https://img.shields.io/badge/Request_a_Workshop-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Request a Workshop">
+🇬🇧 *Planning a Godot workshop at your school? Interested in EdTech collaboration?*
+
+<a href="https://educandus.ch">
+  <img src="https://img.shields.io/badge/Workshop_anfragen-educandus.ch-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Workshop anfragen – educandus.ch">
 </a>
 &nbsp;
 <a href="https://www.linkedin.com/in/martin-stalder-787239216/">
@@ -192,5 +158,5 @@ Experience in rolling out educational technology solutions and providing advance
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 <div align="center">
-  <sub>Built with passion for pedagogy, Godot, and game-based learning</sub>
+  <sub>Mit Leidenschaft für Pädagogik, Godot und Game-Based Learning · Built with passion for pedagogy, Godot, and game-based learning</sub>
 </div>
