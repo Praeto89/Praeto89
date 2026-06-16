@@ -110,16 +110,18 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 
 
 
+
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Repositories
 
 <!-- REPO-LIST:START -->
-- [Praeto89](https://github.com/Praeto89/Praeto89) - GitHub-Profil – EdTech, Godot-Workshops & Educandus _(updated 2026-06-14)_
+- [Praeto89](https://github.com/Praeto89/Praeto89) - GitHub-Profil – EdTech, Godot-Workshops & Educandus _(updated 2026-06-15)_
 - [SobeGameStudios](https://github.com/Praeto89/SobeGameStudios) - Godot-Lernprojekt & Workshop-Material (Gameatelier) _(updated 2026-06-13)_
 - [lp21games](https://github.com/Praeto89/lp21games) - Educational games for the LP21 curriculum _(updated 2026-03-18)_
 - [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
+
 
 
 
