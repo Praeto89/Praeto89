@@ -21,7 +21,7 @@ jobs:
 
       - name: Generate repo list section
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
 
@@ -31,7 +31,7 @@ jobs:
           custom=$(cat assets/repo-descriptions.json 2>/dev/null || echo '{}')
           {
             echo "<!-- REPO-LIST:START -->"
-            jq -r --argjson custom "$custom" '.[] | "- [" + .name + "](" + .html_url + ") - " + ((.description // $custom[.name] // "No description") | gsub("\\n"; " ")) + " _(updated " + ((.pushed_at // "") | sub("T.*"; "")) + ")_"' repos.json
+            jq -r --argjson custom "$custom" '.[] | "- [" + .name + "](" + .html_url + ") - " + ((.description // $custom[.name] // "No description") | gsub("\\n"; " ")) + " _(updated " + ((.pushed_at | split("T")[0])) + ")_"' repos.json
             echo "<!-- REPO-LIST:END -->"
           } > repos_section.md
 
@@ -55,7 +55,7 @@ jobs:
 
       - name: Generate language stats section
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
 
