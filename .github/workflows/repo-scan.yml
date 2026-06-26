@@ -23,7 +23,7 @@ jobs:
 
       - name: Fetch repositories
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_REPOS }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh api /user/repos \
             --paginate \
