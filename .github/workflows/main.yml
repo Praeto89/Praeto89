@@ -40,7 +40,7 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Praeto89
-          github_token: ${{ secrets.GH_TOKEN_REPOS || secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             dist/snake.svg?palette=github-dark
       
