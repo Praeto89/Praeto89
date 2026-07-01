@@ -53,7 +53,7 @@ jobs:
 
           python update_section.py repos_section.md REPO-LIST
 
-      - name: Generate language stats section
+      - name: Generate language stats bar chart
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -67,26 +67,78 @@ jobs:
           done < repo_names.txt | jq -s 'add // {} | to_entries | sort_by(-.value)' > lang_data.json
 
           total=$(jq '[.[].value] | add // 1' lang_data.json)
+          jq -r --argjson total "$total" '.[:6][] | (.value * 100 / $total | round) as $pct | select($pct >= 1) | .key + " " + ($pct | tostring)' lang_data.json > lang_bars.txt
 
-          {
-            echo "<!-- LANG-STATS:START -->"
-            jq -r --argjson total "$total" '.[:6][] | (.value * 100 / $total | round) as $pct | select($pct >= 1) | "- **" + .key + ":** " + ($pct | tostring) + "%"' lang_data.json
-            echo "<!-- LANG-STATS:END -->"
-          } > lang_section.md
+          cat > render_lang_bars.py <<'PY'
+          from pathlib import Path
 
-          python update_section.py lang_section.md LANG-STATS
+          COLORS = {
+              "Python": ("#3776ab", "#54a0ff"),
+              "TypeScript": ("#3178c6", "#a29bfe"),
+              "JavaScript": ("#f0db4f", "#f7e98e"),
+              "GDScript": ("#478cbf", "#00d2d3"),
+              "HTML": ("#e34c26", "#fd79a8"),
+              "CSS": ("#264de4", "#74b9ff"),
+              "Shell": ("#89e051", "#55efc4"),
+              "Java": ("#b07219", "#e17055"),
+              "C#": ("#178600", "#00b894"),
+              "C++": ("#f34b7d", "#fd79a8"),
+              "Go": ("#00add8", "#81ecec"),
+              "Rust": ("#dea584", "#fab1a0"),
+          }
+          DEFAULT_COLOR = ("#6c5ce7", "#a29bfe")
+
+          lines = [l.split() for l in Path("lang_bars.txt").read_text().splitlines() if l.strip()]
+          rows = [(name, int(pct)) for name, pct in lines]
+
+          row_height = 42
+          height = max(row_height * len(rows) + 10, 60)
+          bar_width = 450
+
+          defs = []
+          bars = []
+          for i, (name, pct) in enumerate(rows):
+              y_text = 20 + i * row_height
+              y_bar = 26 + i * row_height
+              start, end = COLORS.get(name, DEFAULT_COLOR)
+              grad_id = f"grad-{i}"
+              defs.append(
+                  f'<linearGradient id="{grad_id}" x1="0%" y1="0%" x2="100%" y2="0%">'
+                  f'<stop offset="0%" stop-color="{start}"/>'
+                  f'<stop offset="100%" stop-color="{end}"/>'
+                  f'</linearGradient>'
+              )
+              fill_width = round(bar_width * pct / 100)
+              bars.append(
+                  f'<text x="0" y="{y_text}" font-family="\'Segoe UI\', Arial, sans-serif" font-size="13" '
+                  f'fill="#c5c9d0" font-weight="600">{name}</text>\n'
+                  f'  <text x="490" y="{y_text}" font-family="\'Segoe UI\', Arial, sans-serif" font-size="13" '
+                  f'fill="#a29bfe" text-anchor="end">{pct}%</text>\n'
+                  f'  <rect x="0" y="{y_bar}" width="{bar_width}" height="10" rx="5" fill="#1a1a3e"/>\n'
+                  f'  <rect x="0" y="{y_bar}" width="{fill_width}" height="10" rx="5" fill="url(#{grad_id})"/>'
+              )
+
+          svg = (
+              f'<svg width="500" height="{height}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 {height}">\n'
+              f'  <defs>\n    ' + "\n    ".join(defs) + "\n  </defs>\n\n  "
+              + "\n\n  ".join(bars) + "\n</svg>\n"
+          )
+          Path("assets/lang-bars.svg").write_text(svg)
+          PY
+
+          python render_lang_bars.py
 
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          if git diff --quiet -- README.md; then
+          if git diff --quiet -- README.md assets/lang-bars.svg; then
             echo "No changes to commit"
             exit 0
           fi
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add README.md
+          git add README.md assets/lang-bars.svg
           git commit -m "chore: update profile sections"
           git push

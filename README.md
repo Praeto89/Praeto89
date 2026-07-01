@@ -99,13 +99,6 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
   <img src="./assets/lang-bars.svg" alt="Sprachverteilung" width="500"/>
 </div>
 
-<!-- LANG-STATS:START -->
-- **Python:** 41%
-- **GDScript:** 34%
-- **TypeScript:** 20%
-- **HTML:** 4%
-<!-- LANG-STATS:END -->
-
 
 
 
