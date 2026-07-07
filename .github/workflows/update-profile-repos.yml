@@ -53,7 +53,7 @@ jobs:
 
           python update_section.py repos_section.md REPO-LIST
 
-      - name: Generate language stats section
+      - name: Generate language stats bar chart
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -61,32 +61,47 @@ jobs:
 
           gh api /users/Praeto89/repos --paginate --jq '.[].full_name' > repo_names.txt
 
-          # Fetch languages per repo and aggregate
+          # Fetch languages per repo and aggregate byte counts
           while IFS= read -r repo; do
             gh api "/repos/$repo/languages" 2>/dev/null || echo '{}'
           done < repo_names.txt | jq -s 'add // {} | to_entries | sort_by(-.value)' > lang_data.json
 
           total=$(jq '[.[].value] | add // 1' lang_data.json)
 
-          {
-            echo "<!-- LANG-STATS:START -->"
-            jq -r --argjson total "$total" '.[:6][] | (.value * 100 / $total | round) as $pct | select($pct >= 1) | "- **" + .key + ":** " + ($pct | tostring) + "%"' lang_data.json
-            echo "<!-- LANG-STATS:END -->"
-          } > lang_section.md
-
-          python update_section.py lang_section.md LANG-STATS
+          # Render the bar chart SVG from the live language data (single source of truth)
+          jq -r --argjson total "$total" '
+            def col($k): {
+              "Python":"#3776ab","TypeScript":"#3178c6","JavaScript":"#f1e05a",
+              "GDScript":"#478cbf","HTML":"#e34c26","CSS":"#563d7c","Kotlin":"#A97BFF",
+              "PowerShell":"#012456","Shell":"#89e051","C#":"#178600","Java":"#b07219",
+              "C++":"#f34b7d","Go":"#00ADD8","Ruby":"#701516","Rust":"#dea584"
+            }[$k] // "#8b8ba0";
+            ([ .[] | {name: .key, pct: (.value * 100 / $total | round)} | select(.pct >= 1) ] | .[0:6]) as $langs
+            | ($langs | length) as $n
+            | (12 + $n * 42) as $h
+            | (["<svg width=\"500\" height=\"\($h)\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 \($h)\">"]
+               + ([ $langs | to_entries[]
+                    | (.key * 42) as $off
+                    | (20 + $off) as $ty
+                    | (26 + $off) as $by
+                    | (.value.pct * 4.5 | round) as $bw
+                    | "  <text x=\"0\" y=\"\($ty)\" font-family=\"'"'"'Segoe UI'"'"', Arial, sans-serif\" font-size=\"13\" fill=\"#c5c9d0\" font-weight=\"600\">\(.value.name)</text>\n  <text x=\"490\" y=\"\($ty)\" font-family=\"'"'"'Segoe UI'"'"', Arial, sans-serif\" font-size=\"13\" fill=\"#a29bfe\" text-anchor=\"end\">\(.value.pct)%</text>\n  <rect x=\"0\" y=\"\($by)\" width=\"450\" height=\"10\" rx=\"5\" fill=\"#1a1a3e\"/>\n  <rect x=\"0\" y=\"\($by)\" width=\"\($bw)\" height=\"10\" rx=\"5\" fill=\"\(col(.value.name))\"/>"
+                  ])
+               + ["</svg>"])
+            | join("\n")
+          ' lang_data.json > assets/lang-bars.svg
 
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          if git diff --quiet -- README.md; then
+          if git diff --quiet -- README.md assets/lang-bars.svg; then
             echo "No changes to commit"
             exit 0
           fi
           git config user.name "GitHub Action"
           git config user.email "action@github.com"
-          git add README.md
+          git add README.md assets/lang-bars.svg
           git commit -m "chore: update profile sections"
           git push
