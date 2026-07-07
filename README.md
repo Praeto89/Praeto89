@@ -85,12 +85,6 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
 
-<br><br>
-
-<img src="https://img.shields.io/badge/LehrerOffice-Superadmin-C7CEEA?style=flat" alt="LehrerOffice">
-<img src="https://img.shields.io/badge/Pupil-Superadmin-B5EAD7?style=flat" alt="Pupil">
-<img src="https://img.shields.io/badge/Escola-Superadmin-FFD6BA?style=flat" alt="Escola">
-
 </div>
 
 ### Sprachverteilung
@@ -106,25 +100,6 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 - **HTML:** 4%
 <!-- LANG-STATS:END -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
 ## Repositories
@@ -135,25 +110,6 @@ Erfahrung in der Einführung von EdTech-Lösungen und im erweiterten administrat
 - [lp21games](https://github.com/Praeto89/lp21games) - Educational games for the LP21 curriculum _(updated 2026-03-18)_
 - [wochenplaner](https://github.com/Praeto89/wochenplaner) - Wochenplaner für Schüler und Lehrpersonen.  _(updated 2026-01-26)_
 <!-- REPO-LIST:END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <img src="./assets/canvas-bg.svg" alt="" width="100%">
 
